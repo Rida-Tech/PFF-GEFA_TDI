@@ -86,6 +86,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\22-224447_neukundengewinnung-kundenbindung-icono-login.png" />
+    <Content Include="Resources\enter %282%29.png" />
+    <Content Include="Resources\icons8-nom-48.png" />
+    <Content Include="Resources\logo-offpt.png" />
+    <Content Include="Resources\security.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
