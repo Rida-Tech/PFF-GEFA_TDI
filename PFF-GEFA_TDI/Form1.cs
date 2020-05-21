@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PFF_GEFA_TDI
 {
-    public partial class Form1 : Form
+    public partial class R_Login_Form : Form
     {
-        public Form1()
+        public R_Login_Form()
         {
             InitializeComponent();
         }
