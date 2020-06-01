@@ -16,5 +16,13 @@ namespace PFF_GEFA_TDI
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Voullez vous vraiment quitter?","Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
