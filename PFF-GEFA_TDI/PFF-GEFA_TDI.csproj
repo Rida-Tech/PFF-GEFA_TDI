@@ -97,6 +97,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\22-224447_neukundengewinnung-kundenbindung-icono-login.png" />
+    <Content Include="Resources\e0602.png" />
+    <Content Include="Resources\e0813.png" />
+    <Content Include="Resources\e1355.png" />
+    <Content Include="Resources\e1491.png" />
+    <Content Include="Resources\e2764.png" />
     <Content Include="Resources\enter %282%29.png" />
     <Content Include="Resources\icons8-nom-48.png" />
     <Content Include="Resources\logo-offpt.png" />
