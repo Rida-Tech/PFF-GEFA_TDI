@@ -73,6 +73,7 @@ namespace PFF_GEFA_TDI
                     var frm = new R_Main_Form();
                     frm.Closed += (s, args) => this.Close();
                     frm.Show();
+                    
 
 
                     MessageBox.Show("Bienvenue Mr/Md " + dr[0].ToString() + ".", "BIENVENUE", MessageBoxButtons.OK, MessageBoxIcon.Information);
