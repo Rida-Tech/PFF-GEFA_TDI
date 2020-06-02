@@ -131,6 +131,9 @@
             // 
             this.btnConnexion.BackColor = System.Drawing.Color.ForestGreen;
             this.btnConnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConnexion.FlatAppearance.BorderSize = 0;
+            this.btnConnexion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnConnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnexion.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnexion.Location = new System.Drawing.Point(98, 414);
             this.btnConnexion.Name = "btnConnexion";
@@ -144,6 +147,9 @@
             // 
             this.btnAnnuler.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnnuler.FlatAppearance.BorderSize = 0;
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnuler.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.Location = new System.Drawing.Point(98, 492);
             this.btnAnnuler.Name = "btnAnnuler";

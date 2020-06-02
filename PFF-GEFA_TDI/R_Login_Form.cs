@@ -60,7 +60,7 @@ namespace PFF_GEFA_TDI
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SELECT Nom,Password from Login", con);
+            SqlCommand cmd = new SqlCommand("SELECT Nom,Password from Login WHERE Nom='"+textBox1.Text +"' and Password='"+textBox2.Text+"'", con);
             
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
@@ -68,14 +68,19 @@ namespace PFF_GEFA_TDI
             {
                 if (textBox1.Text == dr[0].ToString() && textBox2.Text == dr[1].ToString())
                 {
-                    Form frm = new R_Main_Form();
-                    Form frm2 = new R_Login_Form();
+
+                    this.Hide();
+                    var frm = new R_Main_Form();
+                    frm.Closed += (s, args) => this.Close();
                     frm.Show();
+
+
                     MessageBox.Show("Bienvenue Mr/Md " + dr[0].ToString() + ".", "BIENVENUE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frm2.Visible = false;
+                    
                 }
-                else MessageBox.Show("Mot de passe ou Nom d'utilisateur incorrect!! Ressayer...", "Message D'erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
+            else MessageBox.Show("Mot de passe ou Nom d'utilisateur incorrect!! Ressayer...", "Message D'erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             con.Close();
         }
         // To this.
