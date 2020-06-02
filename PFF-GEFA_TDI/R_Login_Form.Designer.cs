@@ -36,8 +36,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConnexion = new System.Windows.Forms.Button();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@
             this.lTitre.Size = new System.Drawing.Size(324, 57);
             this.lTitre.TabIndex = 0;
             this.lTitre.Text = "Authentification";
+            this.lTitre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lTitre_MouseDown);
             // 
             // panel1
             // 
@@ -60,6 +61,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 75);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
@@ -125,28 +127,31 @@
             this.textBox2.TabIndex = 6;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // btnConnexion
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(98, 414);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 52);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Connexion";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConnexion.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnConnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConnexion.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnexion.Location = new System.Drawing.Point(98, 414);
+            this.btnConnexion.Name = "btnConnexion";
+            this.btnConnexion.Size = new System.Drawing.Size(308, 52);
+            this.btnConnexion.TabIndex = 8;
+            this.btnConnexion.Text = "Connexion";
+            this.btnConnexion.UseVisualStyleBackColor = false;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
-            // button2
+            // btnAnnuler
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(98, 492);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(308, 52);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Annuler";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAnnuler.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnnuler.Font = new System.Drawing.Font("Solomon Sans Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.Location = new System.Drawing.Point(98, 492);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(308, 52);
+            this.btnAnnuler.TabIndex = 9;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = false;
+            this.btnAnnuler.Click += new System.EventHandler(this.button2_Click);
             // 
             // R_Login_Form
             // 
@@ -154,8 +159,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(486, 607);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel2);
@@ -184,7 +189,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConnexion;
+        private System.Windows.Forms.Button btnAnnuler;
     }
 }
