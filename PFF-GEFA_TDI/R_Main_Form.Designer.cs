@@ -29,59 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(R_Main_Form));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Enseignents = new System.Windows.Forms.Button();
+            this.btn_Salles = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_Examens = new System.Windows.Forms.Button();
+            this.btn_Groupes = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.lnom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lDeconnecter = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Enseignents
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(124, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(590, 100);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Gestion des Filières";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Enseignents.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_Enseignents.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Enseignents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Enseignents.FlatAppearance.BorderSize = 0;
+            this.btn_Enseignents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Enseignents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Enseignents.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Enseignents.ForeColor = System.Drawing.Color.White;
+            this.btn_Enseignents.Image = ((System.Drawing.Image)(resources.GetObject("btn_Enseignents.Image")));
+            this.btn_Enseignents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Enseignents.Location = new System.Drawing.Point(124, 244);
+            this.btn_Enseignents.Name = "btn_Enseignents";
+            this.btn_Enseignents.Size = new System.Drawing.Size(590, 100);
+            this.btn_Enseignents.TabIndex = 0;
+            this.btn_Enseignents.Text = "Gestion des Enseignents";
+            this.btn_Enseignents.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_Salles
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(1027, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(590, 100);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Gestion des Salles";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Salles.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Salles.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Salles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salles.FlatAppearance.BorderSize = 0;
+            this.btn_Salles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Salles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Salles.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Salles.ForeColor = System.Drawing.Color.White;
+            this.btn_Salles.Image = ((System.Drawing.Image)(resources.GetObject("btn_Salles.Image")));
+            this.btn_Salles.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Salles.Location = new System.Drawing.Point(124, 752);
+            this.btn_Salles.Name = "btn_Salles";
+            this.btn_Salles.Size = new System.Drawing.Size(590, 100);
+            this.btn_Salles.TabIndex = 1;
+            this.btn_Salles.Text = "Gestion des Salles";
+            this.btn_Salles.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -102,43 +104,43 @@
             this.button3.Text = "Gestion des Survillances";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_Examens
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(124, 583);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(590, 100);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Gestion des Examens";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_Examens.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_Examens.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Examens.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Examens.FlatAppearance.BorderSize = 0;
+            this.btn_Examens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Examens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Examens.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Examens.ForeColor = System.Drawing.Color.White;
+            this.btn_Examens.Image = ((System.Drawing.Image)(resources.GetObject("btn_Examens.Image")));
+            this.btn_Examens.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Examens.Location = new System.Drawing.Point(124, 583);
+            this.btn_Examens.Name = "btn_Examens";
+            this.btn_Examens.Size = new System.Drawing.Size(590, 100);
+            this.btn_Examens.TabIndex = 3;
+            this.btn_Examens.Text = "Gestion des Examens";
+            this.btn_Examens.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_Groupes
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(124, 415);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(590, 100);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Gestion des Groups";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_Groupes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_Groupes.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Groupes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Groupes.FlatAppearance.BorderSize = 0;
+            this.btn_Groupes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Groupes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Groupes.Font = new System.Drawing.Font("MingLiU-ExtB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Groupes.ForeColor = System.Drawing.Color.White;
+            this.btn_Groupes.Image = ((System.Drawing.Image)(resources.GetObject("btn_Groupes.Image")));
+            this.btn_Groupes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Groupes.Location = new System.Drawing.Point(124, 415);
+            this.btn_Groupes.Name = "btn_Groupes";
+            this.btn_Groupes.Size = new System.Drawing.Size(590, 100);
+            this.btn_Groupes.TabIndex = 4;
+            this.btn_Groupes.Text = "Gestion des Groupes";
+            this.btn_Groupes.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -206,11 +208,11 @@
             this.lDeconnecter.Size = new System.Drawing.Size(100, 17);
             this.lDeconnecter.TabIndex = 9;
             this.lDeconnecter.Text = "Déconnecter";
-            this.lDeconnecter.Click += new System.EventHandler(this.lDeconnecter_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lDeconnecter);
@@ -221,6 +223,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1690, 104);
             this.panel1.TabIndex = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PFF_GEFA_TDI.Properties.Resources.logo_offpt;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(322, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -243,30 +255,32 @@
             this.ClientSize = new System.Drawing.Size(1690, 868);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_Groupes);
+            this.Controls.Add(this.btn_Examens);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Salles);
+            this.Controls.Add(this.btn_Enseignents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "R_Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "R_Main_Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.R_Main_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Enseignents;
+        private System.Windows.Forms.Button btn_Salles;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_Examens;
+        private System.Windows.Forms.Button btn_Groupes;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -274,5 +288,6 @@
         public System.Windows.Forms.Label lnom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

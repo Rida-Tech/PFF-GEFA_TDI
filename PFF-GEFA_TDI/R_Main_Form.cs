@@ -27,16 +27,9 @@ namespace PFF_GEFA_TDI
             }
         }
 
-        private void lDeconnecter_Click(object sender, EventArgs e)
+        private void R_Main_Form_Load(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voullez vous vraiment déconnecter ?", "Déconnexion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                this.Hide();
-                var frm = new R_Login_Form();
-                frm.Closed += (s, args) => this.Close();
-                frm.Show();
-            }
-            
+
         }
     }
 }

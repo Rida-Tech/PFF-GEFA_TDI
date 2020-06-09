@@ -16,7 +16,7 @@ namespace PFF_GEFA_TDI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new R_Login_Form());
+            Application.Run(new R_Main_Form());
         }
     }
 }
