@@ -42,7 +42,7 @@ namespace PFF_GEFA_TDI.DAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = procedur_stocke;
-
+            cmd.Connection = con;
             if(param != null)
             {
                 for(int i=0;i<param.Length;i++)
@@ -51,7 +51,7 @@ namespace PFF_GEFA_TDI.DAL
                 }
             }
 
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -63,7 +63,7 @@ namespace PFF_GEFA_TDI.DAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = procedur_stocke;
-
+            cmd.Connection = con;
             if (param != null)
             {
                     cmd.Parameters.AddRange(param);
