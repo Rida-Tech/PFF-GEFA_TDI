@@ -68,5 +68,43 @@ namespace PFF_GEFA_TDI.BL
             return dt;
         }
 
+        public void SupprimerEnseignent(int id)
+        {
+            DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
+            dal.Open();
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ID", SqlDbType.Int);
+            param[0].Value = id;
+        
+            dal.ExecuteCommand("SupprimerEnseignent", param);
+            dal.Close();
+
+        }
+        public void ModifierEnseignent(int id, string nom, string prenom, string tel, string email)
+        {
+            DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
+            dal.Open();
+            SqlParameter[] param = new SqlParameter[5];
+            param[0] = new SqlParameter("@id", SqlDbType.Int);
+            param[0].Value = id;
+
+            param[1] = new SqlParameter("@nom", SqlDbType.VarChar, 30);
+            param[1].Value = nom;
+
+            param[2] = new SqlParameter("@prenom", SqlDbType.VarChar, 30);
+            param[2].Value = prenom;
+
+            param[3] = new SqlParameter("@tel", SqlDbType.VarChar, 10);
+            param[3].Value = tel;
+
+            param[4] = new SqlParameter("@email", SqlDbType.VarChar, 80);
+            param[4].Value = email;
+
+            dal.ExecuteCommand("ModifierEnseignent", param);
+            dal.Close();
+
+        }
+
+
     }
 }

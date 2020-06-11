@@ -12,6 +12,7 @@ namespace PFF_GEFA_TDI.PL
 {
     public partial class R_Main_Form : Form
     {
+        public static R_Main_Form form;
         public R_Main_Form()
         {
             InitializeComponent();
@@ -31,5 +32,6 @@ namespace PFF_GEFA_TDI.PL
             Form frm = new R_Enseignent_Form();
             frm.ShowDialog();
         }
+
     }
 }

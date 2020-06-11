@@ -1,4 +1,4 @@
-CREATE DATABASE PFF_GEFA_TDI
+CREATE DATABASE PFF_GEFA_TDI if Not EXISTS
 use PFF_GEFA_TDI
 
 create TABLE Login(id int primary key identity(1,1),Nom varchar(30),Password varchar(20))

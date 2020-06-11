@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lTitre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.GreenYellow;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lTitre);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -71,15 +71,15 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // lTitre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ajouter Un Enseignent";
+            this.lTitre.AutoSize = true;
+            this.lTitre.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTitre.Location = new System.Drawing.Point(136, 28);
+            this.lTitre.Name = "lTitre";
+            this.lTitre.Size = new System.Drawing.Size(265, 33);
+            this.lTitre.TabIndex = 0;
+            this.lTitre.Text = "Ajouter Un Enseignent";
             // 
             // label2
             // 
@@ -184,6 +184,7 @@
             this.btnAjouter.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnAjouter.FlatAppearance.BorderSize = 0;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAjouter.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAjouter.Location = new System.Drawing.Point(54, 415);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(209, 41);
@@ -197,6 +198,7 @@
             this.btnAnnuler.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.Location = new System.Drawing.Point(279, 415);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(207, 41);
@@ -238,18 +240,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnAnnuler;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtPrenom;
+        public System.Windows.Forms.TextBox txtTel;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.Button btnAjouter;
+        public System.Windows.Forms.Label lTitre;
     }
 }

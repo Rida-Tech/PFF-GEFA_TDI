@@ -12,6 +12,7 @@ namespace PFF_GEFA_TDI.PL
 {
     public partial class R_Ajouter_Enseignent : Form
     {
+        public string cas = "Ajouter";
         BL.Enseignent ensg = new BL.Enseignent();
         public R_Ajouter_Enseignent()
         {
@@ -22,13 +23,24 @@ namespace PFF_GEFA_TDI.PL
         {
             try
             {
-                if (txtID.Text != "" && txtNom.Text != "" && txtPrenom.Text != "" && txtTel.Text != "" && txtEmail.Text != "")
+                if(cas=="Ajouter")
                 {
-                    ensg.AjouterEnseignent(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtTel.Text, txtEmail.Text);
-                    MessageBox.Show("Enseignent Ajouter avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtID.Text = ""; txtNom.Text = ""; txtPrenom.Text = ""; txtTel.Text = ""; txtEmail.Text = "";
+                    if (txtID.Text != "" && txtNom.Text != "" && txtPrenom.Text != "" && txtTel.Text != "" && txtEmail.Text != "")
+                    {
+                        ensg.AjouterEnseignent(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtTel.Text, txtEmail.Text);
+                        MessageBox.Show("Enseignent Ajouter avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtID.Text = ""; txtNom.Text = ""; txtPrenom.Text = ""; txtTel.Text = ""; txtEmail.Text = "";
+
+                    }
+                    else MessageBox.Show("Merci de remplir les champs vides", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else MessageBox.Show("Merci de remplir les champs vides", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    ensg.ModifierEnseignent(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtTel.Text, txtEmail.Text);
+                    MessageBox.Show("Enseignent Modifier avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                R_Enseignent_Form.getForm.dataGridView1.DataSource = ensg.ListEnseignent();
+                
             }
             catch (Exception ex)
             {
@@ -46,14 +58,17 @@ namespace PFF_GEFA_TDI.PL
         {
             try
             {
-                DataTable dt = new DataTable();
-                dt = ensg.VerifierID(txtID.Text);
-                if (dt.Rows.Count > 0)
+                if (cas=="Ajouter")
                 {
-                    MessageBox.Show("Ce identifient existe déjà", "Erreur!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtID.Focus();
-                    txtID.SelectionStart = 0;
-                    txtID.SelectionLength = txtID.TextLength;
+                    DataTable dt = new DataTable();
+                    dt = ensg.VerifierID(txtID.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Ce identifient existe déjà", "Erreur!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtID.Focus();
+                        txtID.SelectionStart = 0;
+                        txtID.SelectionLength = txtID.TextLength;
+                    } 
                 }
             }
             catch (Exception ex)
