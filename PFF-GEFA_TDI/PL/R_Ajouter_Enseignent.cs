@@ -34,10 +34,17 @@ namespace PFF_GEFA_TDI.PL
                 {
                     if (txtID.Text != "" && txtNom.Text != "" && txtPrenom.Text != "" && txtTel.Text != "" && txtEmail.Text != "")
                     {
+                        if(txtTel.Text.Length!=10)
+                        {
+                            MessageBox.Show("Le numéro de téléphone doit contenaire 10 chiffres..", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtTel.Focus();
+                        }
+                        else
+                        { 
                         ensg.AjouterEnseignent(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtTel.Text, txtEmail.Text);
                         MessageBox.Show("Enseignent Ajouter avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtID.Text = ""; txtNom.Text = ""; txtPrenom.Text = ""; txtTel.Text = ""; txtEmail.Text = "";
-
+                        }
                     }
                     else MessageBox.Show("Merci de remplir les champs vides", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
