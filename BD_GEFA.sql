@@ -1,6 +1,10 @@
 CREATE DATABASE PFF_GEFA_TDI
 use PFF_GEFA_TDI
 
+
+#------------------------------------------------------------
+# Table: Enseignent
+#------------------------------------------------------------
 CREATE TABLE Enseignent(
 	ID_ensg      INT  NOT NULL ,
 	Nom_ensg     VARCHAR (30)  ,
