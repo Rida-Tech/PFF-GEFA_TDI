@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace PFF_GEFA_TDI.PL
 {
@@ -14,6 +15,12 @@ namespace PFF_GEFA_TDI.PL
     {
         public string cas = "Ajouter";
         BL.Enseignent ensg = new BL.Enseignent();
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
         public R_Ajouter_Enseignent()
         {
             InitializeComponent();
@@ -78,19 +85,6 @@ namespace PFF_GEFA_TDI.PL
             }
         }
 
-        private void btnAnnuler_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Close();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         // Forcer la zone de text a n'accepter que des chiffres
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -109,6 +103,23 @@ namespace PFF_GEFA_TDI.PL
                 e.Handled = true; // Set l'evenement comme etant completement fini
                 return;
             }
+        }
+
+        private void R_Ajouter_Enseignent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
     }
 }

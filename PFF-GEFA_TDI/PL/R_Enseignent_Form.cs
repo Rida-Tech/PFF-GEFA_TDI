@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,12 @@ namespace PFF_GEFA_TDI.PL
     public partial class R_Enseignent_Form : Form
     {
         private static R_Enseignent_Form frm;
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
         static void frm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frm = null;
@@ -80,6 +87,18 @@ namespace PFF_GEFA_TDI.PL
             frm.txtID.ReadOnly = true;
             frm.txtNom.Focus();
             frm.ShowDialog();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
     }
 }
