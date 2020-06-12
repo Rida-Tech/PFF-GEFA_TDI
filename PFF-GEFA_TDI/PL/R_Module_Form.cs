@@ -11,78 +11,64 @@ using System.Windows.Forms;
 
 namespace PFF_GEFA_TDI.PL
 {
-    public partial class R_Enseignent_Form : Form
+    public partial class R_Module_Form : Form
     {
-        private static R_Enseignent_Form frm;
+        BL.Module mdl = new BL.Module();
+        private static R_Module_Form frm;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         static void frm_FormClosed(object sender, FormClosedEventArgs e)
         {
             frm = null;
         }
-        public static R_Enseignent_Form getForm
+        public static R_Module_Form getForm
         {
             get
             {
-                if(frm==null)
+                if (frm == null)
                 {
-                    frm = new R_Enseignent_Form();
+                    frm = new R_Module_Form();
                     frm.FormClosed += new FormClosedEventHandler(frm_FormClosed);
                 }
                 return frm;
             }
         }
-        BL.Enseignent ensg = new BL.Enseignent();
-        public R_Enseignent_Form()
+        public R_Module_Form()
         {
             InitializeComponent();
             this.ShowInTaskbar = false;
             if (frm == null)
                 frm = this;
-            this.dataGridView1.DataSource = ensg.ListEnseignent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Close();
+            this.dataGridView1.DataSource = mdl.ListeModules();
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            Form frm = new R_Ajouter_Enseignent();
+            Form frm = new R_Ajouter_Module();
             frm.ShowDialog();
-        }
-
-        private void txtRechercher_TextChanged(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = ensg.RechercherEnseignent(txtRechercher.Text);
-            this.dataGridView1.DataSource = dt;
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Voullez vous vraiment supprimer l'enseignent ?","Question ???",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("Voullez vous vraiment supprimer le Module ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ensg.SupprimerEnseignent(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                mdl.SupprimerModule(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                 MessageBox.Show("L'enseignent supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.dataGridView1.DataSource = ensg.ListEnseignent();
+                this.dataGridView1.DataSource = mdl.ListeModules();
             }
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            R_Ajouter_Enseignent frm = new R_Ajouter_Enseignent();
+            R_Ajouter_Module frm = new R_Ajouter_Module();
             frm.txtID.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
             frm.txtNom.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            frm.txtPrenom.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            frm.txtTel.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            frm.txtEmail.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            frm.lTitre.Text = "Modifier: "+ this.dataGridView1.CurrentRow.Cells[1].Value.ToString()+" "+ this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frm.lTitre.Text = "Modifier Module";
             frm.btnAjouter.Text = "Modifier";
             frm.cas = "Modifier";
             frm.txtID.ReadOnly = true;
@@ -96,10 +82,22 @@ namespace PFF_GEFA_TDI.PL
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
 
-        private void panel7_MouseDown(object sender, MouseEventArgs e)
+        private void panel6_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtRechercher_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = mdl.RechercherModule(txtRechercher.Text);
+            this.dataGridView1.DataSource = dt;
         }
     }
 }

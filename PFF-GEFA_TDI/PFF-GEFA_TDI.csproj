@@ -54,12 +54,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Enseignent.cs" />
+    <Compile Include="BL\Groupe.cs" />
+    <Compile Include="BL\Module.cs" />
+    <Compile Include="BL\Salle.cs" />
     <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\Exite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Exite.Designer.cs">
+      <DependentUpon>Exite.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\R_Ajouter_Enseignent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Ajouter_Enseignent.Designer.cs">
       <DependentUpon>R_Ajouter_Enseignent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Groupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Groupe.Designer.cs">
+      <DependentUpon>R_Ajouter_Groupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Module.Designer.cs">
+      <DependentUpon>R_Ajouter_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Salle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Salle.Designer.cs">
+      <DependentUpon>R_Ajouter_Salle.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\R_Enseignent_Form.cs">
       <SubType>Form</SubType>
@@ -67,22 +94,70 @@
     <Compile Include="PL\R_Enseignent_Form.Designer.cs">
       <DependentUpon>R_Enseignent_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\R_Filiere_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Filiere_Form.Designer.cs">
+      <DependentUpon>R_Filiere_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Groupe_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Groupe_Form.Designer.cs">
+      <DependentUpon>R_Groupe_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\R_Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Main_Form.Designer.cs">
       <DependentUpon>R_Main_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\R_Module_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Module_Form.Designer.cs">
+      <DependentUpon>R_Module_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Salle_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Salle_Form.Designer.cs">
+      <DependentUpon>R_Salle_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\Exite.resx">
+      <DependentUpon>Exite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Ajouter_Enseignent.resx">
       <DependentUpon>R_Ajouter_Enseignent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Ajouter_Groupe.resx">
+      <DependentUpon>R_Ajouter_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Ajouter_Module.resx">
+      <DependentUpon>R_Ajouter_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Ajouter_Salle.resx">
+      <DependentUpon>R_Ajouter_Salle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Enseignent_Form.resx">
       <DependentUpon>R_Enseignent_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Filiere_Form.resx">
+      <DependentUpon>R_Filiere_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Groupe_Form.resx">
+      <DependentUpon>R_Groupe_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Main_Form.resx">
       <DependentUpon>R_Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Module_Form.resx">
+      <DependentUpon>R_Module_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Salle_Form.resx">
+      <DependentUpon>R_Salle_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,14 +186,21 @@
     <Content Include="Resources\22-224447_neukundengewinnung-kundenbindung-icono-login.png" />
     <Content Include="Resources\e0602.png" />
     <Content Include="Resources\e0813.png" />
+    <None Include="Resources\telecommuting.png" />
+    <None Include="Resources\e1352.png" />
+    <None Include="Resources\e0831.png" />
+    <None Include="Resources\e1343.png" />
     <Content Include="Resources\e1355.png" />
     <Content Include="Resources\e1491.png" />
     <None Include="Resources\e2539.png" />
+    <None Include="Resources\e2555.png" />
     <Content Include="Resources\e2764.png" />
     <Content Include="Resources\enter %282%29.png" />
     <None Include="Resources\icons8-fermer-80.png" />
+    <None Include="Resources\icons8-groupe-d%27utilisateurs-homme-femme-48.png" />
     <Content Include="Resources\icons8-nom-48.png" />
     <Content Include="Resources\logo-offpt.png" />
+    <None Include="Resources\multiple-users-silhouette.png" />
     <Content Include="Resources\security.png" />
   </ItemGroup>
   <ItemGroup />

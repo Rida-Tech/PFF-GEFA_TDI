@@ -24,6 +24,7 @@ namespace PFF_GEFA_TDI.PL
         public R_Ajouter_Enseignent()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false;
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
@@ -95,21 +96,23 @@ namespace PFF_GEFA_TDI.PL
         // Forcer la zone de text a n'accepter que des chiffres
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsControl(e.KeyChar) || !Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true; // Set l'evenement comme etant completement fini
-                return;
-            }
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = false;
+            else if (char.IsControl(e.KeyChar))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         // Forcer la zone de text a n'accepter que des chiffres
         private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsControl(e.KeyChar) || !Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = true; // Set l'evenement comme etant completement fini
-                return;
-            }
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = false;
+            else if (char.IsControl(e.KeyChar))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
 
         private void R_Ajouter_Enseignent_Load(object sender, EventArgs e)

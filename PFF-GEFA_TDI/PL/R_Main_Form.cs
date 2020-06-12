@@ -16,14 +16,15 @@ namespace PFF_GEFA_TDI.PL
         public R_Main_Form()
         {
             InitializeComponent();
+            timer1.Start();
+            label3.Text= DateTime.Now.ToString("D");
+            label2.Text = "ISTA NTIC Sidi youssef Ben Ali Marrakech";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Voullez vous vraiment quitter l'appliquation?","Attention",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            Form frm = new Exite();
+            frm.ShowDialog();
             
         }
 
@@ -33,5 +34,43 @@ namespace PFF_GEFA_TDI.PL
             frm.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Location = new Point(label2.Location.X + 5, label2.Location.Y);
+
+            if (label2.Location.X > this.Width)
+            {
+                label2.Location = new Point(0 - label2.Width, label2.Location.Y);
+            }
+        }
+
+        private void btnModule_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Module_Form();
+            frm.ShowDialog();
+        }
+
+        private void R_Main_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalles_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Salle_Form();
+            frm.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Filiere_Form();
+            frm.ShowDialog();
+        }
+
+        private void btnGroupes_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Groupe_Form();
+            frm.ShowDialog();
+        }
     }
 }
