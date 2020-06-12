@@ -177,6 +177,59 @@ select * from Groupe where ID_Groupe=@id
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
+#-----------------------------------------------
+# Table : Salle
+#-----------------------------------------------
+CREATE TABLE Salle(
+	Num_salle        VARCHAR (10) NOT NULL ,
+	Type_salle       VARCHAR (20)  ,
+	Capacite_salle   INT    ,
+	CONSTRAINT Salle_PK PRIMARY KEY (Num_salle)
+)
+
+Insert into Salle values('A1','Théorique',25)
+						,('A2','Théorique',25)
+						,('A3','Pratique',30)
+						,('A4','Pratique',30)
+						,('B1','Théorique',25)
+						,('B2','Théorique',25)
+						,('B3','Pratique',30)
+						,('B4','Théorique',25)
+						,('CA','Pratique',30)
+						
+-----------------------------------------------------------------------------------
+Create proc ListeSalle
+as
+select Num_salle as 'Numéro de Salle',Type_salle as 'Type de Salle',Capacite_salle as 'Capacité' from Salle
+
+----------------------------------------------------------------------------------
+CREATE PROC Ajouter_Salle
+@Num_salle varchar(10), @Type_salle varchar(20),@capacite int
+as
+Insert into Salle values(@Num_salle,@Type_salle,@capacite)
+-----------------------------------------------------------------------------------
+Create PROC SupprimerSalle
+@id VARCHAR(10)
+as
+DELETE Salle WHERE Num_salle=@id;
+------------------------------------------------------------------------------------
+CREATE PROC ModifierSalle
+@Num_salle varchar(10), @Type_salle varchar(20),@capacite int
+as
+UPDATE Salle set Type_salle=@Type_salle, Capacite_salle=@capacite where Num_salle=@Num_salle
+-----------------------------------------------------------------------------------
+CREATE PROC RechercherSalle
+@ID varchar(80)
+as
+SELECT * FROM Salle 
+WHERE Num_salle+
+	  Type_salle+
+	  Capacite_salle LIKE '%'+@ID+'%' 
+-------------------------------------------------------------------------------------	  
+CREATE PROC VerifierIDSalle
+@id int
+as
+select * from Salle where Num_salle=@id
 
 
 
