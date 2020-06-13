@@ -230,7 +230,60 @@ CREATE PROC VerifierIDSalle
 @id int
 as
 select * from Salle where Num_salle=@id
+------------------------------------------------------------------------------------------
+#-----------------------------------------
+# Table: Module
+#-------------------------------------------------------
+CREATE TABLE Module(
+	ID_Module   INT  NOT NULL ,
+	Module      VARCHAR (75)   ,
+	CONSTRAINT Module_PK PRIMARY KEY (ID_Module)
+);
 
+Insert into Module values(1,'Développement Application Mobile')
+						,(2,'Développement Application Web')
+						,(3,'Développement Application Desktop')
+						,(4,'Architecture et fonctionnement d’un Réseau Informatique')
+						,(5,'Configuration d’un routeur')
+						,(6,'Installation d’applications propres à Internet')
+						,(7,'Communication Ecrite et Orale')
+						,(8,'Anglais technique')
+						,(9,'L’entreprise et son environnement')
+						,(10,'Métier et formation dans les NTIC')
+						,(11,'Système d’exploitation Open Source')
+
+-----------------------------------------------------------------------------------
+Create proc ListeModules
+as
+select ID_Module as 'Numéro de Module',Module as 'Nom de Module' from Module
+
+----------------------------------------------------------------------------------
+CREATE PROC Ajouter_Module
+@Id int, @module varchar(75)
+as
+Insert into Module values(@Id,@module)
+-----------------------------------------------------------------------------------
+CREATE PROC SupprimerModule
+@id int
+as
+DELETE Module WHERE ID_Module=@id;
+------------------------------------------------------------------------------------
+CREATE PROC ModifierModule
+@Id int, @module varchar(75)
+as
+UPDATE Module set Module=@module where ID_Module=@Id
+-----------------------------------------------------------------------------------
+CREATE PROC RechercherModule
+@ID varchar(80)
+as
+SELECT * FROM Module 
+WHERE Convert(varchar,ID_Module)+
+	  Module LIKE '%'+@ID+'%' 
+-------------------------------------------------------------------------------------	  
+CREATE PROC VerifierIDModule
+@id int
+as
+select * from Module where ID_Module=@id
 
 
 
