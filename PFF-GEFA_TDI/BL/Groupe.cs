@@ -39,7 +39,7 @@ namespace PFF_GEFA_TDI.BL
             dal.Close();
             return dt;
         }
-        public void Ajouter_Groupe(int id,string Niveau, string groupe, int filiere,int effectife,string annee)
+        public void Ajouter_Groupe(int id, string groupe, int filiere,int effectife,string annee, string Niveau)
         {
             DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
             dal.Open();
@@ -47,20 +47,20 @@ namespace PFF_GEFA_TDI.BL
             param[0] = new SqlParameter("@ID", SqlDbType.Int);
             param[0].Value = id;
 
-            param[1] = new SqlParameter("@Niveau", SqlDbType.VarChar,10);
-            param[1].Value = Niveau;
+            param[1] = new SqlParameter("@Groupe", SqlDbType.VarChar, 10);
+            param[1].Value = groupe;
 
-            param[2] = new SqlParameter("@Groupe", SqlDbType.VarChar, 10);
-            param[2].Value = groupe;
+            param[2] = new SqlParameter("@Filiere", SqlDbType.Int);
+            param[2].Value = filiere;
 
-            param[3] = new SqlParameter("@Filiere", SqlDbType.Int);
-            param[3].Value = filiere;
+            param[3] = new SqlParameter("@Effectife", SqlDbType.Int);
+            param[3].Value = effectife;
 
-            param[4] = new SqlParameter("@Effectife", SqlDbType.Int);
-            param[4].Value = effectife;
+            param[4] = new SqlParameter("@Annee", SqlDbType.VarChar, 10);
+            param[4].Value = annee;
 
-            param[5] = new SqlParameter("@Annee", SqlDbType.VarChar, 10);
-            param[5].Value = annee;
+            param[5] = new SqlParameter("@Niveau", SqlDbType.VarChar, 10);
+            param[5].Value = Niveau;
 
             dal.ExecuteCommand("Ajouter_Groupe", param);
             dal.Close();
@@ -102,7 +102,7 @@ namespace PFF_GEFA_TDI.BL
             dal.Close();
 
         }
-        public void ModifierGroupe(int id,string niveau, string groupe, int filiere, int effectife, string annee)
+        public void ModifierGroupe(int id, string groupe, int filiere, int effectife, string annee, string niveau)
         {
             DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
             dal.Open();
@@ -110,20 +110,20 @@ namespace PFF_GEFA_TDI.BL
             param[0] = new SqlParameter("@ID", SqlDbType.Int);
             param[0].Value = id;
 
-            param[1] = new SqlParameter("@Niveau", SqlDbType.VarChar,10);
-            param[1].Value = niveau;
+            param[1] = new SqlParameter("@Groupe", SqlDbType.VarChar, 10);
+            param[1].Value = groupe;
 
-            param[2] = new SqlParameter("@Groupe", SqlDbType.VarChar, 10);
-            param[2].Value = groupe;
+            param[2] = new SqlParameter("@Filiere", SqlDbType.Int);
+            param[2].Value = filiere;
 
-            param[3] = new SqlParameter("@Filiere", SqlDbType.Int);
-            param[3].Value = filiere;
+            param[3] = new SqlParameter("@Effectife", SqlDbType.Int);
+            param[3].Value = effectife;
 
-            param[4] = new SqlParameter("@Effectife", SqlDbType.Int);
-            param[4].Value = effectife;
+            param[4] = new SqlParameter("@Annee", SqlDbType.VarChar, 10);
+            param[4].Value = annee;
 
-            param[5] = new SqlParameter("@Annee", SqlDbType.VarChar, 10);
-            param[5].Value = annee;
+            param[5] = new SqlParameter("@Niveau", SqlDbType.VarChar, 10);
+            param[5].Value = niveau;
 
             dal.ExecuteCommand("ModifierGroupe", param);
             dal.Close();
