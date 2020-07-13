@@ -65,7 +65,7 @@ namespace PFF_GEFA_TDI.PL
             if (MessageBox.Show("Voullez vous vraiment supprimer le Groupe ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 grp.SupprimerGroupe(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-                MessageBox.Show("L'enseignent supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Le groupe supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dataGridView1.DataSource = grp.ListeGroupe();
             }
         }
@@ -80,6 +80,28 @@ namespace PFF_GEFA_TDI.PL
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             Form frm = new R_Ajouter_Groupe();
+            frm.ShowDialog();
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            R_Ajouter_Groupe frm = new R_Ajouter_Groupe();
+            frm.cbFiliere.Items.Clear();
+            frm.cbCours.Items.Clear();
+            frm.cbNiveau.Items.Clear();
+            frm.txtID.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm.cbNiveau.Text= this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frm.txtGroupe.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frm.cbFiliere.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frm.cbCours.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frm.txtEffectif.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            frm.cbAnnee.SelectedIndex = frm.cbAnnee.FindString(this.dataGridView1.CurrentRow.Cells[6].Value.ToString());
+           
+            frm.lTitre.Text = "Modifier: " + this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frm.btnAjouter.Text = "Modifier";
+            frm.cas = "Modifier";
+            frm.txtID.ReadOnly = true;
+            frm.txtGroupe.Focus();
             frm.ShowDialog();
         }
     }

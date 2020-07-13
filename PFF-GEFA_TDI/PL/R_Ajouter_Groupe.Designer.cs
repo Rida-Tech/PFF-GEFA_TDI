@@ -48,6 +48,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbFiliere = new System.Windows.Forms.ComboBox();
             this.cbNiveau = new System.Windows.Forms.ComboBox();
+            this.cbCours = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbAnnee = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +60,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(10, 455);
+            this.panel4.Location = new System.Drawing.Point(10, 518);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(496, 10);
             this.panel4.TabIndex = 30;
@@ -67,7 +71,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 89);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 376);
+            this.panel3.Size = new System.Drawing.Size(10, 439);
             this.panel3.TabIndex = 29;
             // 
             // panel2
@@ -76,7 +80,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(506, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 376);
+            this.panel2.Size = new System.Drawing.Size(10, 439);
             this.panel2.TabIndex = 28;
             // 
             // btnAjouter
@@ -85,18 +89,19 @@
             this.btnAjouter.FlatAppearance.BorderSize = 0;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAjouter.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjouter.Location = new System.Drawing.Point(174, 372);
+            this.btnAjouter.Location = new System.Drawing.Point(174, 450);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(305, 41);
             this.btnAjouter.TabIndex = 27;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 315);
+            this.label6.Location = new System.Drawing.Point(67, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 25;
@@ -105,7 +110,7 @@
             // txtEffectif
             // 
             this.txtEffectif.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEffectif.Location = new System.Drawing.Point(174, 265);
+            this.txtEffectif.Location = new System.Drawing.Point(174, 216);
             this.txtEffectif.Multiline = true;
             this.txtEffectif.Name = "txtEffectif";
             this.txtEffectif.Size = new System.Drawing.Size(305, 22);
@@ -115,7 +120,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 265);
+            this.label5.Location = new System.Drawing.Point(69, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 22);
             this.label5.TabIndex = 23;
@@ -125,7 +130,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(78, 222);
+            this.label4.Location = new System.Drawing.Point(78, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 21;
@@ -134,7 +139,7 @@
             // txtGroupe
             // 
             this.txtGroupe.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroupe.Location = new System.Drawing.Point(174, 176);
+            this.txtGroupe.Location = new System.Drawing.Point(174, 172);
             this.txtGroupe.Multiline = true;
             this.txtGroupe.Name = "txtGroupe";
             this.txtGroupe.Size = new System.Drawing.Size(305, 22);
@@ -143,17 +148,18 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(174, 136);
+            this.txtID.Location = new System.Drawing.Point(174, 128);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(305, 22);
             this.txtID.TabIndex = 18;
+            this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 136);
+            this.label2.Location = new System.Drawing.Point(43, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 17;
@@ -190,7 +196,7 @@
             // 
             this.lTitre.AutoSize = true;
             this.lTitre.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.Location = new System.Drawing.Point(193, 28);
+            this.lTitre.Location = new System.Drawing.Point(165, 28);
             this.lTitre.Name = "lTitre";
             this.lTitre.Size = new System.Drawing.Size(187, 33);
             this.lTitre.TabIndex = 0;
@@ -200,11 +206,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 176);
+            this.label3.Location = new System.Drawing.Point(22, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 22);
+            this.label3.Size = new System.Drawing.Size(121, 22);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Nom Groupe :";
+            this.label3.Text = "Code Groupe :";
             // 
             // panel1
             // 
@@ -238,7 +244,7 @@
             // 
             this.cbFiliere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiliere.FormattingEnabled = true;
-            this.cbFiliere.Location = new System.Drawing.Point(174, 222);
+            this.cbFiliere.Location = new System.Drawing.Point(174, 306);
             this.cbFiliere.Name = "cbFiliere";
             this.cbFiliere.Size = new System.Drawing.Size(305, 24);
             this.cbFiliere.TabIndex = 31;
@@ -247,16 +253,59 @@
             // 
             this.cbNiveau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNiveau.FormattingEnabled = true;
-            this.cbNiveau.Location = new System.Drawing.Point(174, 315);
+            this.cbNiveau.Location = new System.Drawing.Point(174, 352);
             this.cbNiveau.Name = "cbNiveau";
             this.cbNiveau.Size = new System.Drawing.Size(305, 24);
             this.cbNiveau.TabIndex = 32;
+            // 
+            // cbCours
+            // 
+            this.cbCours.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCours.FormattingEnabled = true;
+            this.cbCours.Location = new System.Drawing.Point(174, 260);
+            this.cbCours.Name = "cbCours";
+            this.cbCours.Size = new System.Drawing.Size(305, 24);
+            this.cbCours.TabIndex = 34;
+            this.cbCours.SelectedIndexChanged += new System.EventHandler(this.cbCours_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 263);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 22);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Cours(J/S) :";
+            // 
+            // cbAnnee
+            // 
+            this.cbAnnee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAnnee.FormattingEnabled = true;
+            this.cbAnnee.Location = new System.Drawing.Point(174, 398);
+            this.cbAnnee.Name = "cbAnnee";
+            this.cbAnnee.Size = new System.Drawing.Size(305, 24);
+            this.cbAnnee.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(67, 398);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 22);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Année :";
             // 
             // R_Ajouter_Groupe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 465);
+            this.ClientSize = new System.Drawing.Size(516, 528);
+            this.Controls.Add(this.cbAnnee);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbCours);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbNiveau);
             this.Controls.Add(this.cbFiliere);
             this.Controls.Add(this.panel4);
@@ -276,6 +325,7 @@
             this.Name = "R_Ajouter_Groupe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R_Ajouter_Groupe";
+            this.Load += new System.EventHandler(this.R_Ajouter_Groupe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -304,7 +354,11 @@
         public System.Windows.Forms.Label lTitre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbFiliere;
-        private System.Windows.Forms.ComboBox cbNiveau;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox cbFiliere;
+        public System.Windows.Forms.ComboBox cbNiveau;
+        public System.Windows.Forms.ComboBox cbCours;
+        public System.Windows.Forms.ComboBox cbAnnee;
+        private System.Windows.Forms.Label label7;
     }
 }

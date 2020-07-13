@@ -29,15 +29,16 @@ namespace PFF_GEFA_TDI.PL
         public R_Filiere_Form()
         {
             InitializeComponent();
+            
             this.ShowInTaskbar = false;
-            da = new SqlDataAdapter("SELECT Filiere as 'Nom Filière',Cours as 'Type de Cours' From Filiere", con);
+            da = new SqlDataAdapter("SELECT ID_Filiere as 'Identifiant', Filiere as 'Nom Filière',Cours as 'Type de Cours',Niveau From Filiere", con);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             txtNom.DataBindings.Add("text", dt, "Nom Filière");
             txtCours.DataBindings.Add("text", dt, "Type de Cours");
+            
             bmb = this.BindingContext[dt];
             lPosition.Text = (bmb.Position+1) + " / " + bmb.Count;
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -122,6 +123,18 @@ namespace PFF_GEFA_TDI.PL
             da.Update(dt);
             lPosition.Text = (bmb.Position + 1) + " / " + bmb.Count;
             MessageBox.Show("la filière a été Modifier avec succès ", "Bien", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void R_Filiere_Form_Load(object sender, EventArgs e)
+        {
+            this.dataGridView1.Columns[0].Width = 80;
+            this.dataGridView1.Columns[2].Width = 150;
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,9 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Enseignent.cs" />
+    <Compile Include="BL\Epreuve.cs" />
+    <Compile Include="BL\Examen.cs" />
     <Compile Include="BL\Groupe.cs" />
     <Compile Include="BL\Module.cs" />
     <Compile Include="BL\Salle.cs" />
+    <Compile Include="BL\Stagiaire.cs" />
     <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="PL\Exite.cs">
       <SubType>Form</SubType>
@@ -64,11 +67,23 @@
     <Compile Include="PL\Exite.Designer.cs">
       <DependentUpon>Exite.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\GestionExamen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\GestionExamen.Designer.cs">
+      <DependentUpon>GestionExamen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\R_Ajouter_Enseignent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Ajouter_Enseignent.Designer.cs">
       <DependentUpon>R_Ajouter_Enseignent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Examen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Examen.Designer.cs">
+      <DependentUpon>R_Ajouter_Examen.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\R_Ajouter_Groupe.cs">
       <SubType>Form</SubType>
@@ -76,23 +91,35 @@
     <Compile Include="PL\R_Ajouter_Groupe.Designer.cs">
       <DependentUpon>R_Ajouter_Groupe.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\R_Ajouter_Module.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\R_Ajouter_Module.Designer.cs">
-      <DependentUpon>R_Ajouter_Module.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\R_Ajouter_Salle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Ajouter_Salle.Designer.cs">
       <DependentUpon>R_Ajouter_Salle.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\R_Ajouter_Stagiaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Ajouter_Stagiaire.Designer.cs">
+      <DependentUpon>R_Ajouter_Stagiaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\R_Enseignent_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Enseignent_Form.Designer.cs">
       <DependentUpon>R_Enseignent_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Epreuve_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Epreuve_Form.Designer.cs">
+      <DependentUpon>R_Epreuve_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\R_Examen_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Examen_Form.Designer.cs">
+      <DependentUpon>R_Examen_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\R_Filiere_Form.cs">
       <SubType>Form</SubType>
@@ -112,37 +139,49 @@
     <Compile Include="PL\R_Main_Form.Designer.cs">
       <DependentUpon>R_Main_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\R_Module_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\R_Module_Form.Designer.cs">
-      <DependentUpon>R_Module_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\R_Salle_Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\R_Salle_Form.Designer.cs">
       <DependentUpon>R_Salle_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\R_Stagiaire_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\R_Stagiaire_Form.Designer.cs">
+      <DependentUpon>R_Stagiaire_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\Exite.resx">
       <DependentUpon>Exite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\GestionExamen.resx">
+      <DependentUpon>GestionExamen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Ajouter_Enseignent.resx">
       <DependentUpon>R_Ajouter_Enseignent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Ajouter_Examen.resx">
+      <DependentUpon>R_Ajouter_Examen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Ajouter_Groupe.resx">
       <DependentUpon>R_Ajouter_Groupe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\R_Ajouter_Module.resx">
-      <DependentUpon>R_Ajouter_Module.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Ajouter_Salle.resx">
       <DependentUpon>R_Ajouter_Salle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Ajouter_Stagiaire.resx">
+      <DependentUpon>R_Ajouter_Stagiaire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Enseignent_Form.resx">
       <DependentUpon>R_Enseignent_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Epreuve_Form.resx">
+      <DependentUpon>R_Epreuve_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Examen_Form.resx">
+      <DependentUpon>R_Examen_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Filiere_Form.resx">
       <DependentUpon>R_Filiere_Form.cs</DependentUpon>
@@ -153,11 +192,11 @@
     <EmbeddedResource Include="PL\R_Main_Form.resx">
       <DependentUpon>R_Main_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\R_Module_Form.resx">
-      <DependentUpon>R_Module_Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Salle_Form.resx">
       <DependentUpon>R_Salle_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\R_Stagiaire_Form.resx">
+      <DependentUpon>R_Stagiaire_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

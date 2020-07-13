@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace PFF_GEFA_TDI.DAL
 {
@@ -39,37 +40,50 @@ namespace PFF_GEFA_TDI.DAL
         //Cette méthode pour la lecture des données depuis la base des données
         public DataTable SelectData(string procedur_stocke, SqlParameter[] param)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = procedur_stocke;
-            cmd.Connection = con;
-            if(param != null)
-            {
-                for(int i=0;i<param.Length;i++)
+            
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procedur_stocke;
+                cmd.Connection = con;
+                if (param != null)
                 {
-                    cmd.Parameters.Add(param[i]);
+                    for (int i = 0; i < param.Length; i++)
+                    {
+                        cmd.Parameters.Add(param[i]);
+                    }
                 }
-            }
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            
         }
 
         // Cette méthode pour Modifier Ajouter Supprimer les données...
         public void ExecuteCommand(string procedur_stocke, SqlParameter[] param)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = procedur_stocke;
-            cmd.Connection = con;
-            if (param != null)
-            {
+            
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procedur_stocke;
+                cmd.Connection = con;
+                if (param != null)
+                {
                     cmd.Parameters.AddRange(param);
-            }
+                }
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+            
+            
+        }
+        public void ShowContent(Control control,Control content)
+        {
+            content.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            control.BringToFront();
+            control.Focus();
+            content.Controls.Add(control);
         }
     }
 }

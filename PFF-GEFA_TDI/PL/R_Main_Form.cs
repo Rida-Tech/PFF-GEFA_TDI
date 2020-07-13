@@ -44,12 +44,6 @@ namespace PFF_GEFA_TDI.PL
             }
         }
 
-        private void btnModule_Click(object sender, EventArgs e)
-        {
-            Form frm = new R_Module_Form();
-            frm.ShowDialog();
-        }
-
         private void R_Main_Form_Load(object sender, EventArgs e)
         {
 
@@ -70,6 +64,24 @@ namespace PFF_GEFA_TDI.PL
         private void btnGroupes_Click(object sender, EventArgs e)
         {
             Form frm = new R_Groupe_Form();
+            frm.ShowDialog();
+        }
+
+        private void btnStagiaire_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Stagiaire_Form();
+            frm.ShowDialog();
+        }
+
+        private void btnEpreuve_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Epreuve_Form();
+            frm.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Examen_Form();
             frm.ShowDialog();
         }
     }
