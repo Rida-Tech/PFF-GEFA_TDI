@@ -100,7 +100,7 @@ namespace PFF_GEFA_TDI.BL
             param[0] = new SqlParameter("@id", SqlDbType.VarChar, 10);
             param[0].Value = id;
 
-            dal.ExecuteCommand("SupprimerStagiair", param);
+            dal.ExecuteCommand("SupprimerStagiaire", param);
             dal.Close();
 
         }
@@ -108,7 +108,7 @@ namespace PFF_GEFA_TDI.BL
         {
             DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
             dal.Open();
-            SqlParameter[] param = new SqlParameter[3];
+            SqlParameter[] param = new SqlParameter[5];
             param[0] = new SqlParameter("@id", SqlDbType.Int);
             param[0].Value = id;
 

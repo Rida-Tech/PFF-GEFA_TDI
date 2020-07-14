@@ -38,7 +38,7 @@
             this.cbGoupe = new System.Windows.Forms.ComboBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 89);
             this.panel1.TabIndex = 31;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // panel7
             // 
@@ -88,7 +89,7 @@
             // 
             this.lTitre.AutoSize = true;
             this.lTitre.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.Location = new System.Drawing.Point(187, 28);
+            this.lTitre.Location = new System.Drawing.Point(176, 28);
             this.lTitre.Name = "lTitre";
             this.lTitre.Size = new System.Drawing.Size(203, 33);
             this.lTitre.TabIndex = 0;
@@ -142,6 +143,7 @@
             this.btnAjouter.TabIndex = 38;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // label6
             // 
@@ -153,14 +155,15 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Groupe :";
             // 
-            // txtId
+            // txtID
             // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(208, 155);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(305, 22);
-            this.txtId.TabIndex = 36;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(208, 155);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(305, 22);
+            this.txtID.TabIndex = 36;
+            this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label3
             // 
@@ -206,9 +209,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(56, 241);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 22);
+            this.label2.Size = new System.Drawing.Size(79, 22);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Nom Prénom :";
+            this.label2.Text = "Prénom :";
             // 
             // txtEmail
             // 
@@ -243,7 +246,7 @@
             this.Controls.Add(this.cbGoupe);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -251,6 +254,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "R_Ajouter_Stagiaire";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R_Ajouter_Stagiaire";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -272,7 +276,7 @@
         private System.Windows.Forms.ComboBox cbGoupe;
         public System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label1;

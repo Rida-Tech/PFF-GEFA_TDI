@@ -35,9 +35,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lTitre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnImprimerTout = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
@@ -45,12 +45,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtRechercher = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -120,20 +119,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1310, 89);
             this.panel1.TabIndex = 31;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::PFF_GEFA_TDI.Properties.Resources.e2539;
+            this.pictureBox1.Location = new System.Drawing.Point(1265, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lTitre
             // 
             this.lTitre.AutoSize = true;
             this.lTitre.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitre.Location = new System.Drawing.Point(562, 28);
+            this.lTitre.Location = new System.Drawing.Point(525, 28);
             this.lTitre.Name = "lTitre";
-            this.lTitre.Size = new System.Drawing.Size(187, 33);
+            this.lTitre.Size = new System.Drawing.Size(260, 33);
             this.lTitre.TabIndex = 0;
-            this.lTitre.Text = "Ajouter Groupe";
+            this.lTitre.Text = "Gestion des Stagiaires";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnImprimerTout);
             this.groupBox1.Controls.Add(this.btnAjouter);
             this.groupBox1.Controls.Add(this.btnSupprimer);
             this.groupBox1.Controls.Add(this.btnModifier);
@@ -144,26 +156,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opération";
             // 
-            // btnImprimerTout
-            // 
-            this.btnImprimerTout.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnImprimerTout.FlatAppearance.BorderSize = 0;
-            this.btnImprimerTout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimerTout.Location = new System.Drawing.Point(873, 37);
-            this.btnImprimerTout.Name = "btnImprimerTout";
-            this.btnImprimerTout.Size = new System.Drawing.Size(226, 41);
-            this.btnImprimerTout.TabIndex = 9;
-            this.btnImprimerTout.Text = "Imprimer la liste";
-            this.btnImprimerTout.UseVisualStyleBackColor = false;
-            // 
             // btnAjouter
             // 
             this.btnAjouter.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnAjouter.FlatAppearance.BorderSize = 0;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAjouter.Location = new System.Drawing.Point(177, 37);
+            this.btnAjouter.Location = new System.Drawing.Point(61, 30);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(226, 41);
+            this.btnAjouter.Size = new System.Drawing.Size(344, 41);
             this.btnAjouter.TabIndex = 5;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = false;
@@ -174,24 +174,26 @@
             this.btnSupprimer.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnSupprimer.FlatAppearance.BorderSize = 0;
             this.btnSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSupprimer.Location = new System.Drawing.Point(409, 37);
+            this.btnSupprimer.Location = new System.Drawing.Point(869, 30);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(226, 41);
+            this.btnSupprimer.Size = new System.Drawing.Size(344, 41);
             this.btnSupprimer.TabIndex = 6;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = false;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // btnModifier
             // 
             this.btnModifier.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnModifier.FlatAppearance.BorderSize = 0;
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModifier.Location = new System.Drawing.Point(641, 37);
+            this.btnModifier.Location = new System.Drawing.Point(465, 30);
             this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(226, 41);
+            this.btnModifier.Size = new System.Drawing.Size(344, 41);
             this.btnModifier.TabIndex = 7;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // groupBox2
             // 
@@ -228,6 +230,7 @@
             this.txtRechercher.Name = "txtRechercher";
             this.txtRechercher.Size = new System.Drawing.Size(628, 36);
             this.txtRechercher.TabIndex = 17;
+            this.txtRechercher.TextChanged += new System.EventHandler(this.txtRechercher_TextChanged);
             // 
             // label2
             // 
@@ -238,19 +241,6 @@
             this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 16;
             this.label2.Text = "Rechercher:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::PFF_GEFA_TDI.Properties.Resources.e2539;
-            this.pictureBox1.Location = new System.Drawing.Point(1265, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // R_Stagiaire_Form
             // 
@@ -265,14 +255,15 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "R_Stagiaire_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "R_Stagiaire_Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,7 +284,6 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtRechercher;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnImprimerTout;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnModifier;

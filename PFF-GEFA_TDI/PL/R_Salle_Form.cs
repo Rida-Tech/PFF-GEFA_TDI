@@ -93,5 +93,12 @@ namespace PFF_GEFA_TDI.PL
             frm.txtType.Focus();
             frm.ShowDialog();
         }
+
+        private void txtRechercher_TextChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = salle.RechercherSalle(txtRechercher.Text);
+            this.dataGridView1.DataSource = dt;
+        }
     }
 }

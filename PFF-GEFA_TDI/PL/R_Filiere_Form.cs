@@ -31,7 +31,7 @@ namespace PFF_GEFA_TDI.PL
             InitializeComponent();
             
             this.ShowInTaskbar = false;
-            da = new SqlDataAdapter("SELECT ID_Filiere as 'Identifiant', Filiere as 'Nom Filière',Cours as 'Type de Cours',Niveau From Filiere", con);
+            da = new SqlDataAdapter("SELECT ID_Filiere as 'Identifiant', Filiere as 'Nom Filière',Cours as 'Type de Cours' From Filiere", con);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             txtNom.DataBindings.Add("text", dt, "Nom Filière");

@@ -138,6 +138,7 @@
             this.txtRechercher.Name = "txtRechercher";
             this.txtRechercher.Size = new System.Drawing.Size(662, 36);
             this.txtRechercher.TabIndex = 14;
+            this.txtRechercher.TextChanged += new System.EventHandler(this.txtRechercher_TextChanged);
             // 
             // label2
             // 

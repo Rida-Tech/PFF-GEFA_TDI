@@ -42,7 +42,6 @@
             this.btnAjouter = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnImprimerTout = new System.Windows.Forms.Button();
-            this.btnImprimer = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
@@ -58,7 +57,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1301, 10);
+            this.panel6.Size = new System.Drawing.Size(1302, 10);
             this.panel6.TabIndex = 1;
             // 
             // panel1
@@ -70,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1301, 94);
+            this.panel1.Size = new System.Drawing.Size(1302, 94);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -122,14 +121,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(10, 635);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1301, 10);
+            this.panel4.Size = new System.Drawing.Size(1302, 10);
             this.panel4.TabIndex = 10;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1311, 0);
+            this.panel3.Location = new System.Drawing.Point(1312, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 645);
             this.panel3.TabIndex = 11;
@@ -148,7 +147,7 @@
             this.btnModifier.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnModifier.FlatAppearance.BorderSize = 0;
             this.btnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModifier.Location = new System.Drawing.Point(529, 37);
+            this.btnModifier.Location = new System.Drawing.Point(684, 35);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(226, 41);
             this.btnModifier.TabIndex = 2;
@@ -161,7 +160,7 @@
             this.btnSupprimer.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnSupprimer.FlatAppearance.BorderSize = 0;
             this.btnSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSupprimer.Location = new System.Drawing.Point(297, 37);
+            this.btnSupprimer.Location = new System.Drawing.Point(375, 35);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(226, 41);
             this.btnSupprimer.TabIndex = 1;
@@ -174,7 +173,7 @@
             this.btnAjouter.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnAjouter.FlatAppearance.BorderSize = 0;
             this.btnAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAjouter.Location = new System.Drawing.Point(65, 37);
+            this.btnAjouter.Location = new System.Drawing.Point(66, 35);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(226, 41);
             this.btnAjouter.TabIndex = 0;
@@ -185,7 +184,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnImprimerTout);
-            this.groupBox2.Controls.Add(this.btnImprimer);
             this.groupBox2.Controls.Add(this.btnModifier);
             this.groupBox2.Controls.Add(this.btnSupprimer);
             this.groupBox2.Controls.Add(this.btnAjouter);
@@ -202,24 +200,13 @@
             this.btnImprimerTout.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnImprimerTout.FlatAppearance.BorderSize = 0;
             this.btnImprimerTout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimerTout.Location = new System.Drawing.Point(993, 37);
+            this.btnImprimerTout.Location = new System.Drawing.Point(993, 35);
             this.btnImprimerTout.Name = "btnImprimerTout";
             this.btnImprimerTout.Size = new System.Drawing.Size(226, 41);
             this.btnImprimerTout.TabIndex = 4;
             this.btnImprimerTout.Text = "Imprimer la liste";
             this.btnImprimerTout.UseVisualStyleBackColor = false;
-            // 
-            // btnImprimer
-            // 
-            this.btnImprimer.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnImprimer.FlatAppearance.BorderSize = 0;
-            this.btnImprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimer.Location = new System.Drawing.Point(761, 37);
-            this.btnImprimer.Name = "btnImprimer";
-            this.btnImprimer.Size = new System.Drawing.Size(226, 41);
-            this.btnImprimer.TabIndex = 3;
-            this.btnImprimer.Text = "Imprimer";
-            this.btnImprimer.UseVisualStyleBackColor = false;
+            this.btnImprimerTout.Click += new System.EventHandler(this.btnImprimerTout_Click);
             // 
             // dataGridView1
             // 
@@ -251,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1321, 645);
+            this.ClientSize = new System.Drawing.Size(1322, 645);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtRechercher);
             this.Controls.Add(this.label2);
@@ -293,6 +280,5 @@
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnImprimerTout;
-        private System.Windows.Forms.Button btnImprimer;
     }
 }

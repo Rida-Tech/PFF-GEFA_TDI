@@ -76,20 +76,20 @@ namespace PFF_GEFA_TDI.PL
                     if (txtID.Text != "" && txtGroupe.Text != "" && txtEffectif.Text != "")
                     {
 
-                        grp.Ajouter_Groupe(Convert.ToInt32(txtID.Text),cbNiveau.Text, txtGroupe.Text, Convert.ToInt32(cbFiliere.SelectedValue), Convert.ToInt32(txtEffectif.Text), cbAnnee.Text);
+                        grp.Ajouter_Groupe(Convert.ToInt32(txtID.Text), txtGroupe.Text, Convert.ToInt32(cbFiliere.SelectedValue), Convert.ToInt32(txtEffectif.Text), cbAnnee.Text, cbNiveau.Text);
                         MessageBox.Show("Groupe ajouter avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else MessageBox.Show("Merci de remplir les champs vides", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    grp.ModifierGroupe(Convert.ToInt32(txtID.Text), cbNiveau.Text, txtGroupe.Text, Convert.ToInt32(cbFiliere.SelectedValue), Convert.ToInt32(txtEffectif.Text), cbAnnee.Text);
-                    MessageBox.Show("Groupe ajouter avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    grp.ModifierGroupe(Convert.ToInt32(txtID.Text), txtGroupe.Text, Convert.ToInt32(cbFiliere.SelectedValue), Convert.ToInt32(txtEffectif.Text), cbAnnee.Text, cbNiveau.Text);
+                    MessageBox.Show("Groupe Modifier avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
-                    this.Close();
+                    
                 }
                 R_Groupe_Form.getForm.dataGridView1.DataSource = grp.ListeGroupe();
-                this.Close();
+                
 
             }
             catch (Exception ex)

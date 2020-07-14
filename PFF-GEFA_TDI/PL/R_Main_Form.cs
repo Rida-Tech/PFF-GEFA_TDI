@@ -13,10 +13,12 @@ namespace PFF_GEFA_TDI.PL
     public partial class R_Main_Form : Form
     {
         public static R_Main_Form form;
+        PL.R_Login_Form log=new R_Login_Form();
         public R_Main_Form()
         {
             InitializeComponent();
             timer1.Start();
+            label4.Text = log.txtnom.Text;
             label3.Text= DateTime.Now.ToString("D");
             label2.Text = "ISTA NTIC Sidi youssef Ben Ali Marrakech";
         }
@@ -82,6 +84,12 @@ namespace PFF_GEFA_TDI.PL
         private void button8_Click(object sender, EventArgs e)
         {
             Form frm = new R_Examen_Form();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new R_Utilisateur();
             frm.ShowDialog();
         }
     }

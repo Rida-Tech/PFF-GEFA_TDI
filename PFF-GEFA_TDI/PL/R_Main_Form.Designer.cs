@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(R_Main_Form));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnEpreuve = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnStagiaire = new System.Windows.Forms.Button();
-            this.btnSalles = new System.Windows.Forms.Button();
-            this.btnGroupes = new System.Windows.Forms.Button();
-            this.btn_Enseignent = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_Enseignent = new System.Windows.Forms.Button();
+            this.btnStagiaire = new System.Windows.Forms.Button();
+            this.btnEpreuve = new System.Windows.Forms.Button();
+            this.btnGroupes = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnSalles = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,16 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1773, 105);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PFF_GEFA_TDI.Properties.Resources.logo_offpt;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(321, 105);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -98,22 +90,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Gestion des examens de fin d\'année";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::PFF_GEFA_TDI.Properties.Resources.icons8_fermer_80;
-            this.pictureBox1.Location = new System.Drawing.Point(1713, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Honeydew;
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 105);
@@ -134,132 +114,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnEpreuve
-            // 
-            this.btnEpreuve.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEpreuve.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnEpreuve.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEpreuve.FlatAppearance.BorderSize = 0;
-            this.btnEpreuve.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEpreuve.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEpreuve.Image = global::PFF_GEFA_TDI.Properties.Resources.e0813;
-            this.btnEpreuve.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEpreuve.Location = new System.Drawing.Point(1083, 327);
-            this.btnEpreuve.Name = "btnEpreuve";
-            this.btnEpreuve.Size = new System.Drawing.Size(492, 76);
-            this.btnEpreuve.TabIndex = 9;
-            this.btnEpreuve.Text = "Gestion des Epreuves";
-            this.btnEpreuve.UseVisualStyleBackColor = false;
-            this.btnEpreuve.Click += new System.EventHandler(this.btnEpreuve_Click);
-            // 
-            // button8
-            // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = global::PFF_GEFA_TDI.Properties.Resources.e0813;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(197, 474);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(492, 76);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Gestion Des Examens";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = global::PFF_GEFA_TDI.Properties.Resources.e1343;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(1083, 181);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(492, 76);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Gestion des Filières";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnStagiaire
-            // 
-            this.btnStagiaire.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnStagiaire.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnStagiaire.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStagiaire.FlatAppearance.BorderSize = 0;
-            this.btnStagiaire.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStagiaire.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStagiaire.Image = global::PFF_GEFA_TDI.Properties.Resources.e0831;
-            this.btnStagiaire.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStagiaire.Location = new System.Drawing.Point(197, 181);
-            this.btnStagiaire.Name = "btnStagiaire";
-            this.btnStagiaire.Size = new System.Drawing.Size(492, 76);
-            this.btnStagiaire.TabIndex = 5;
-            this.btnStagiaire.Text = "Gestion des Stagiaires";
-            this.btnStagiaire.UseVisualStyleBackColor = false;
-            this.btnStagiaire.Click += new System.EventHandler(this.btnStagiaire_Click);
-            // 
-            // btnSalles
-            // 
-            this.btnSalles.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalles.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnSalles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalles.FlatAppearance.BorderSize = 0;
-            this.btnSalles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalles.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalles.Image = global::PFF_GEFA_TDI.Properties.Resources.telecommuting;
-            this.btnSalles.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalles.Location = new System.Drawing.Point(197, 327);
-            this.btnSalles.Name = "btnSalles";
-            this.btnSalles.Size = new System.Drawing.Size(492, 76);
-            this.btnSalles.TabIndex = 4;
-            this.btnSalles.Text = "Gestion des Salles";
-            this.btnSalles.UseVisualStyleBackColor = false;
-            this.btnSalles.Click += new System.EventHandler(this.btnSalles_Click);
-            // 
-            // btnGroupes
-            // 
-            this.btnGroupes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGroupes.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btnGroupes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGroupes.FlatAppearance.BorderSize = 0;
-            this.btnGroupes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGroupes.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGroupes.Image = global::PFF_GEFA_TDI.Properties.Resources.multiple_users_silhouette;
-            this.btnGroupes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGroupes.Location = new System.Drawing.Point(1083, 35);
-            this.btnGroupes.Name = "btnGroupes";
-            this.btnGroupes.Size = new System.Drawing.Size(492, 76);
-            this.btnGroupes.TabIndex = 3;
-            this.btnGroupes.Text = "Gestion des Groupes";
-            this.btnGroupes.UseVisualStyleBackColor = false;
-            this.btnGroupes.Click += new System.EventHandler(this.btnGroupes_Click);
-            // 
-            // btn_Enseignent
-            // 
-            this.btn_Enseignent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Enseignent.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_Enseignent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Enseignent.FlatAppearance.BorderSize = 0;
-            this.btn_Enseignent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Enseignent.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Enseignent.Image = global::PFF_GEFA_TDI.Properties.Resources.e0813;
-            this.btn_Enseignent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Enseignent.Location = new System.Drawing.Point(197, 35);
-            this.btn_Enseignent.Name = "btn_Enseignent";
-            this.btn_Enseignent.Size = new System.Drawing.Size(492, 76);
-            this.btn_Enseignent.TabIndex = 1;
-            this.btn_Enseignent.Text = "Gestion des Enseignents";
-            this.btn_Enseignent.UseVisualStyleBackColor = false;
-            this.btn_Enseignent.Click += new System.EventHandler(this.btn_Enseignent_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -285,6 +139,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1773, 586);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(431, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 39);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -293,14 +157,164 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::PFF_GEFA_TDI.Properties.Resources.e0813;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(1083, 474);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(492, 76);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Gestion des utilisateurs";
+            this.button1.Text = "Modifier le profile";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Enseignent
+            // 
+            this.btn_Enseignent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Enseignent.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_Enseignent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Enseignent.FlatAppearance.BorderSize = 0;
+            this.btn_Enseignent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Enseignent.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Enseignent.Image = global::PFF_GEFA_TDI.Properties.Resources.e0813;
+            this.btn_Enseignent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Enseignent.Location = new System.Drawing.Point(197, 35);
+            this.btn_Enseignent.Name = "btn_Enseignent";
+            this.btn_Enseignent.Size = new System.Drawing.Size(492, 76);
+            this.btn_Enseignent.TabIndex = 1;
+            this.btn_Enseignent.Text = "Gestion des Enseignents";
+            this.btn_Enseignent.UseVisualStyleBackColor = false;
+            this.btn_Enseignent.Click += new System.EventHandler(this.btn_Enseignent_Click);
+            // 
+            // btnStagiaire
+            // 
+            this.btnStagiaire.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStagiaire.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnStagiaire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStagiaire.FlatAppearance.BorderSize = 0;
+            this.btnStagiaire.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStagiaire.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStagiaire.Image = global::PFF_GEFA_TDI.Properties.Resources.e0831;
+            this.btnStagiaire.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStagiaire.Location = new System.Drawing.Point(197, 181);
+            this.btnStagiaire.Name = "btnStagiaire";
+            this.btnStagiaire.Size = new System.Drawing.Size(492, 76);
+            this.btnStagiaire.TabIndex = 5;
+            this.btnStagiaire.Text = "Gestion des Stagiaires";
+            this.btnStagiaire.UseVisualStyleBackColor = false;
+            this.btnStagiaire.Click += new System.EventHandler(this.btnStagiaire_Click);
+            // 
+            // btnEpreuve
+            // 
+            this.btnEpreuve.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEpreuve.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnEpreuve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEpreuve.FlatAppearance.BorderSize = 0;
+            this.btnEpreuve.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEpreuve.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEpreuve.Image = ((System.Drawing.Image)(resources.GetObject("btnEpreuve.Image")));
+            this.btnEpreuve.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEpreuve.Location = new System.Drawing.Point(1083, 327);
+            this.btnEpreuve.Name = "btnEpreuve";
+            this.btnEpreuve.Size = new System.Drawing.Size(492, 76);
+            this.btnEpreuve.TabIndex = 9;
+            this.btnEpreuve.Text = "Gestion des Epreuves";
+            this.btnEpreuve.UseVisualStyleBackColor = false;
+            this.btnEpreuve.Click += new System.EventHandler(this.btnEpreuve_Click);
+            // 
+            // btnGroupes
+            // 
+            this.btnGroupes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGroupes.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnGroupes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGroupes.FlatAppearance.BorderSize = 0;
+            this.btnGroupes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGroupes.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGroupes.Image = global::PFF_GEFA_TDI.Properties.Resources.multiple_users_silhouette;
+            this.btnGroupes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGroupes.Location = new System.Drawing.Point(1083, 35);
+            this.btnGroupes.Name = "btnGroupes";
+            this.btnGroupes.Size = new System.Drawing.Size(492, 76);
+            this.btnGroupes.TabIndex = 3;
+            this.btnGroupes.Text = "Gestion des Groupes";
+            this.btnGroupes.UseVisualStyleBackColor = false;
+            this.btnGroupes.Click += new System.EventHandler(this.btnGroupes_Click);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button7.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = global::PFF_GEFA_TDI.Properties.Resources.e1343;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.Location = new System.Drawing.Point(1083, 181);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(492, 76);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Gestion des Filières";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnSalles
+            // 
+            this.btnSalles.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalles.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSalles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalles.FlatAppearance.BorderSize = 0;
+            this.btnSalles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalles.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalles.Image = global::PFF_GEFA_TDI.Properties.Resources.telecommuting;
+            this.btnSalles.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalles.Location = new System.Drawing.Point(197, 327);
+            this.btnSalles.Name = "btnSalles";
+            this.btnSalles.Size = new System.Drawing.Size(492, 76);
+            this.btnSalles.TabIndex = 4;
+            this.btnSalles.Text = "Gestion des Salles";
+            this.btnSalles.UseVisualStyleBackColor = false;
+            this.btnSalles.Click += new System.EventHandler(this.btnSalles_Click);
+            // 
+            // button8
+            // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.Location = new System.Drawing.Point(197, 474);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(492, 76);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Gestion Des Examens";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PFF_GEFA_TDI.Properties.Resources.logo_offpt;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 105);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::PFF_GEFA_TDI.Properties.Resources.icons8_fermer_80;
+            this.pictureBox1.Location = new System.Drawing.Point(1713, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // R_Main_Form
             // 
@@ -322,11 +336,11 @@
             this.Load += new System.EventHandler(this.R_Main_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,5 +364,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }

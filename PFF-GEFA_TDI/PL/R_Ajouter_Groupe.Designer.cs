@@ -101,7 +101,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 353);
+            this.label6.Location = new System.Drawing.Point(69, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 22);
             this.label6.TabIndex = 25;
@@ -110,7 +110,7 @@
             // txtEffectif
             // 
             this.txtEffectif.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEffectif.Location = new System.Drawing.Point(174, 216);
+            this.txtEffectif.Location = new System.Drawing.Point(174, 214);
             this.txtEffectif.Multiline = true;
             this.txtEffectif.Name = "txtEffectif";
             this.txtEffectif.Size = new System.Drawing.Size(305, 22);
@@ -130,7 +130,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(78, 308);
+            this.label4.Location = new System.Drawing.Point(80, 395);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 22);
             this.label4.TabIndex = 21;
@@ -139,7 +139,7 @@
             // txtGroupe
             // 
             this.txtGroupe.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroupe.Location = new System.Drawing.Point(174, 172);
+            this.txtGroupe.Location = new System.Drawing.Point(174, 171);
             this.txtGroupe.Multiline = true;
             this.txtGroupe.Name = "txtGroupe";
             this.txtGroupe.Size = new System.Drawing.Size(305, 22);
@@ -244,7 +244,7 @@
             // 
             this.cbFiliere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFiliere.FormattingEnabled = true;
-            this.cbFiliere.Location = new System.Drawing.Point(174, 306);
+            this.cbFiliere.Location = new System.Drawing.Point(176, 392);
             this.cbFiliere.Name = "cbFiliere";
             this.cbFiliere.Size = new System.Drawing.Size(305, 24);
             this.cbFiliere.TabIndex = 31;
@@ -253,7 +253,7 @@
             // 
             this.cbNiveau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNiveau.FormattingEnabled = true;
-            this.cbNiveau.Location = new System.Drawing.Point(174, 352);
+            this.cbNiveau.Location = new System.Drawing.Point(176, 257);
             this.cbNiveau.Name = "cbNiveau";
             this.cbNiveau.Size = new System.Drawing.Size(305, 24);
             this.cbNiveau.TabIndex = 32;
@@ -262,7 +262,7 @@
             // 
             this.cbCours.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCours.FormattingEnabled = true;
-            this.cbCours.Location = new System.Drawing.Point(174, 260);
+            this.cbCours.Location = new System.Drawing.Point(176, 347);
             this.cbCours.Name = "cbCours";
             this.cbCours.Size = new System.Drawing.Size(305, 24);
             this.cbCours.TabIndex = 34;
@@ -272,7 +272,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 263);
+            this.label1.Location = new System.Drawing.Point(48, 350);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 22);
             this.label1.TabIndex = 33;
@@ -282,7 +282,7 @@
             // 
             this.cbAnnee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAnnee.FormattingEnabled = true;
-            this.cbAnnee.Location = new System.Drawing.Point(174, 398);
+            this.cbAnnee.Location = new System.Drawing.Point(176, 302);
             this.cbAnnee.Name = "cbAnnee";
             this.cbAnnee.Size = new System.Drawing.Size(305, 24);
             this.cbAnnee.TabIndex = 36;
@@ -291,7 +291,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 398);
+            this.label7.Location = new System.Drawing.Point(75, 306);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 22);
             this.label7.TabIndex = 35;

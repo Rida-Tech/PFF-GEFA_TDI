@@ -104,5 +104,14 @@ namespace PFF_GEFA_TDI.PL
             frm.txtGroupe.Focus();
             frm.ShowDialog();
         }
+
+        private void btnImprimerTout_Click(object sender, EventArgs e)
+        {
+            RPT.Liste_groupe rpt = new RPT.Liste_groupe();
+            rpt.SetParameterValue("@id", this.dataGridView1.CurrentRow.Cells[2].Value.ToString());
+            RPT.R_Form_RPT frm = new RPT.R_Form_RPT();
+            frm.crystalReportViewer1.ReportSource = rpt;
+            frm.ShowDialog();
+        }
     }
 }
