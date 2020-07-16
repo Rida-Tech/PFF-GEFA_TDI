@@ -115,6 +115,7 @@
             this.txtEffectif.Name = "txtEffectif";
             this.txtEffectif.Size = new System.Drawing.Size(305, 22);
             this.txtEffectif.TabIndex = 24;
+            this.txtEffectif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEffectif_KeyPress);
             // 
             // label5
             // 
@@ -153,6 +154,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(305, 22);
             this.txtID.TabIndex = 18;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             this.txtID.Validated += new System.EventHandler(this.txtID_Validated);
             // 
             // label2
@@ -299,6 +301,7 @@
             // 
             // R_Ajouter_Groupe
             // 
+            this.AcceptButton = this.btnAjouter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 528);

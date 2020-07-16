@@ -54,7 +54,7 @@ namespace PFF_GEFA_TDI.BL
             DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
             DataTable dt = new DataTable();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@id_Epreuve", SqlDbType.VarChar, 80);
+            param[0] = new SqlParameter("@id", SqlDbType.VarChar, 80);
             param[0].Value = ID;
             dt = dal.SelectData("RechercherEpreuve", param);
             dal.Close();

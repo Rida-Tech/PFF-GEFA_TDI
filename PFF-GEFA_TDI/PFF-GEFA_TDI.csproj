@@ -68,17 +68,53 @@
     <Compile Include="BL\Salle.cs" />
     <Compile Include="BL\Stagiaire.cs" />
     <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\Affecter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Affecter.Designer.cs">
+      <DependentUpon>Affecter.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Exite.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\Exite.Designer.cs">
       <DependentUpon>Exite.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Form_Liste_Survillant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Liste_Survillant.Designer.cs">
+      <DependentUpon>Form_Liste_Survillant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_List_Epreuve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_List_Epreuve.Designer.cs">
+      <DependentUpon>Form_List_Epreuve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_List_Groupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_List_Groupe.Designer.cs">
+      <DependentUpon>Form_List_Groupe.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\GestionExamen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PL\GestionExamen.Designer.cs">
       <DependentUpon>GestionExamen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\liste_examens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\liste_examens.Designer.cs">
+      <DependentUpon>liste_examens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Passer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Passer.Designer.cs">
+      <DependentUpon>Passer.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\R_Ajouter_Enseignent.cs">
       <SubType>Form</SubType>
@@ -170,6 +206,12 @@
     <Compile Include="PL\R_Utilisateur.Designer.cs">
       <DependentUpon>R_Utilisateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Surveille.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Surveille.Designer.cs">
+      <DependentUpon>Surveille.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RPT\Liste_groupe.cs">
@@ -184,11 +226,29 @@
     <Compile Include="RPT\R_Form_RPT.Designer.cs">
       <DependentUpon>R_Form_RPT.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PL\Affecter.resx">
+      <DependentUpon>Affecter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Exite.resx">
       <DependentUpon>Exite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Liste_Survillant.resx">
+      <DependentUpon>Form_Liste_Survillant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_List_Epreuve.resx">
+      <DependentUpon>Form_List_Epreuve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_List_Groupe.resx">
+      <DependentUpon>Form_List_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\GestionExamen.resx">
       <DependentUpon>GestionExamen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\liste_examens.resx">
+      <DependentUpon>liste_examens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Passer.resx">
+      <DependentUpon>Passer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Ajouter_Enseignent.resx">
       <DependentUpon>R_Ajouter_Enseignent.cs</DependentUpon>
@@ -234,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\R_Utilisateur.resx">
       <DependentUpon>R_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Surveille.resx">
+      <DependentUpon>Surveille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

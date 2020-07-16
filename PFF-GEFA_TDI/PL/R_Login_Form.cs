@@ -43,6 +43,7 @@ namespace PFF_GEFA_TDI.PL
                 PL.R_Main_Form frm = new R_Main_Form();
                 
                 frm.Show();
+                this.Hide();
             }
             else
                 MessageBox.Show("Login ou mot de pass incorrect!!!", "OOOPS", MessageBoxButtons.OK, MessageBoxIcon.Error);

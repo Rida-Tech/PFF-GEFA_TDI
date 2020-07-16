@@ -115,5 +115,25 @@ namespace PFF_GEFA_TDI.PL
                 }
             }
         }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = false;
+            else if (char.IsControl(e.KeyChar))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
+
+        private void txtEffectif_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = false;
+            else if (char.IsControl(e.KeyChar))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
     }
 }

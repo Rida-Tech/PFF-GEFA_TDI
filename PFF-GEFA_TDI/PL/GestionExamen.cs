@@ -13,14 +13,42 @@ namespace PFF_GEFA_TDI.PL
     public partial class GestionExamen : UserControl
     {
         DAL.DataAccessLayer method = new DAL.DataAccessLayer();
+        BL.Examen ex = new BL.Examen();
+        
         public GestionExamen()
         {
             InitializeComponent();
+            this.dataGridView1.DataSource = ex.ListExamen();
+
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             R_Ajouter_Examen frm = new R_Ajouter_Examen();
+            frm.ShowDialog();
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Voullez vous vraiment supprimer l'enseignent ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ex.SupprimerExamen(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                MessageBox.Show("L'examen supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dataGridView1.DataSource = ex.ListExamen();
+            }
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            R_Ajouter_Examen frm = new R_Ajouter_Examen();
+            frm.txtID.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            frm.cbType.Text = this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            frm.dateExamen.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            frm.txtHeurD.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            frm.txtHeurF.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            frm.lTitre.Text = "Modifier Examen";
+            frm.btnAjouter.Text = "Modifier";
+            frm.cas = "Modifier";
             frm.ShowDialog();
         }
     }

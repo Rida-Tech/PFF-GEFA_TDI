@@ -26,9 +26,7 @@ namespace PFF_GEFA_TDI.PL
         public R_Ajouter_Stagiaire()
         {
             InitializeComponent();
-            cbGoupe.DataSource = grp.ListeGroupe();
-            cbGoupe.DisplayMember = "Groupe";
-            cbGoupe.ValueMember = "Idantifiant";
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -45,7 +43,7 @@ namespace PFF_GEFA_TDI.PL
                     if (txtID.Text != "" && txtNom.Text != "" && txtPrenom.Text != "" && txtEmail.Text != "")
                     {
 
-                        stgr.Ajouter_Stagiaire(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtEmail.Text, Convert.ToInt32(cbGoupe.SelectedValue));
+                        stgr.Ajouter_Stagiaire(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtEmail.Text, Convert.ToInt32(txtidgroupe.Text));
                             MessageBox.Show("Stagiaire Ajouter avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtID.Text = ""; txtNom.Text = ""; txtPrenom.Text = ""; txtEmail.Text = "";
                         
@@ -54,7 +52,7 @@ namespace PFF_GEFA_TDI.PL
                 }
                 else
                 {
-                    stgr.ModifierStagiaire(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtEmail.Text, Convert.ToInt32(cbGoupe.SelectedValue));
+                    stgr.ModifierStagiaire(Convert.ToInt32(txtID.Text), txtNom.Text, txtPrenom.Text, txtEmail.Text, Convert.ToInt32(txtidgroupe.Text));
                     MessageBox.Show("Stagiaire Modifier avec succèss...", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 R_Stagiaire_Form.getForm.dataGridView1.DataSource = stgr.ListeStagiaire();
@@ -96,6 +94,28 @@ namespace PFF_GEFA_TDI.PL
         {
             ReleaseCapture();
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_List_Groupe frm = new Form_List_Groupe();
+            frm.ShowDialog();
+            this.txtidgroupe.Text = frm.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            this.txtgroupe.Text = frm.dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            this.txteffective.Text = frm.dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            this.txtannee.Text = frm.dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            this.txtniveau.Text = frm.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            this.txtfiliere.Text = frm.dataGridView1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+                e.Handled = false;
+            else if (char.IsControl(e.KeyChar))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
     }
 }

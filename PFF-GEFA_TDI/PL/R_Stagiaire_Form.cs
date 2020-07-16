@@ -89,7 +89,7 @@ namespace PFF_GEFA_TDI.PL
             if (MessageBox.Show("Voullez vous vraiment supprimer le stagiaire ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 stgr.SupprimerStagiair(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
-                MessageBox.Show("L'enseignent supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Stagiaire supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dataGridView1.DataSource =stgr.ListeStagiaire();
             }
         }

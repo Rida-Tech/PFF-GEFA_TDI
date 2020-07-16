@@ -86,17 +86,13 @@ namespace PFF_GEFA_TDI.PL
         private void btnModifier_Click(object sender, EventArgs e)
         {
             R_Ajouter_Groupe frm = new R_Ajouter_Groupe();
-            frm.cbFiliere.Items.Clear();
-            frm.cbCours.Items.Clear();
-            frm.cbNiveau.Items.Clear();
             frm.txtID.Text = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
             frm.cbNiveau.Text= this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
             frm.txtGroupe.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             frm.cbFiliere.Text = this.dataGridView1.CurrentRow.Cells[3].Value.ToString();
             frm.cbCours.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
             frm.txtEffectif.Text = this.dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            frm.cbAnnee.SelectedIndex = frm.cbAnnee.FindString(this.dataGridView1.CurrentRow.Cells[6].Value.ToString());
-           
+            frm.cbAnnee.Text = this.dataGridView1.CurrentRow.Cells[6].Value.ToString();           
             frm.lTitre.Text = "Modifier: " + this.dataGridView1.CurrentRow.Cells[1].Value.ToString();
             frm.btnAjouter.Text = "Modifier";
             frm.cas = "Modifier";

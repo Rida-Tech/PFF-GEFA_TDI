@@ -60,12 +60,15 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1155, 472);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1147, 514);
             this.dataGridView1.TabIndex = 7;
             // 
             // txtRechercher
@@ -123,6 +126,7 @@
             this.btnModifier.TabIndex = 5;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = false;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnSupprimer
             // 
@@ -135,6 +139,7 @@
             this.btnSupprimer.TabIndex = 4;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = false;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // btnAjouter
             // 
@@ -176,9 +181,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtRechercher;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -187,5 +189,7 @@
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Panel content;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.GroupBox groupBox1;
     }
 }
