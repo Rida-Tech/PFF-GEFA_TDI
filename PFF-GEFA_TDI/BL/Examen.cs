@@ -42,6 +42,14 @@ namespace PFF_GEFA_TDI.BL
             dal.Close();
             return dt;
         }
+        public DataTable List_Affecter()
+        {
+            DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
+            DataTable dt = new DataTable();
+            dt = dal.SelectData("List_Affecter", null);
+            dal.Close();
+            return dt;
+        }
 
         public void Ajouter_Examen(string type, string date , string debut, string fin, string epreuve)
         {
@@ -176,6 +184,36 @@ namespace PFF_GEFA_TDI.BL
             param[1].Value = idgrp;
 
             dal.ExecuteCommand("SupprimerPasser", param);
+            dal.Close();
+
+        }
+        public void Ajouter_Affecter(string numsalle, int idgrp)
+        {
+            DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
+            dal.Open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@numsalle", SqlDbType.VarChar,10);
+            param[0].Value = numsalle;
+
+            param[1] = new SqlParameter("@idgrp", SqlDbType.Int);
+            param[1].Value = idgrp;
+
+            dal.ExecuteCommand("Ajouter_Affecter", param);
+            dal.Close();
+
+        }
+        public void SupprimerAffecter(string numsalle, int idgrp)
+        {
+            DAL.DataAccessLayer dal = new DAL.DataAccessLayer();
+            dal.Open();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@numsalle", SqlDbType.VarChar, 10);
+            param[0].Value = numsalle;
+
+            param[1] = new SqlParameter("@idgrp", SqlDbType.Int);
+            param[1].Value = idgrp;
+
+            dal.ExecuteCommand("SupprimerAffecter", param);
             dal.Close();
 
         }

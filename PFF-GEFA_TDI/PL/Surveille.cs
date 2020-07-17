@@ -55,7 +55,7 @@ namespace PFF_GEFA_TDI.PL
             {
                 ex.SupprimerSurville(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()), int.Parse(this.dataGridView1.CurrentRow.Cells[3].Value.ToString()));
                 MessageBox.Show("supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.dataGridView1.DataSource = ex.liste_Surveille();//
+                this.dataGridView1.DataSource = ex.liste_Surveille();
             }
         }
     }

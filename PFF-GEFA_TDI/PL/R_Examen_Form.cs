@@ -62,5 +62,11 @@ namespace PFF_GEFA_TDI.PL
             Passer passer = new Passer();
             method.ShowContent(passer, panel5);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Affecter affecter = new Affecter();
+            method.ShowContent(affecter, panel5);
+        }
     }
 }

@@ -110,6 +110,12 @@
     <Compile Include="PL\liste_examens.Designer.cs">
       <DependentUpon>liste_examens.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Liste_Salle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Liste_Salle.Designer.cs">
+      <DependentUpon>Liste_Salle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Passer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +220,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT\Calendrie_Examen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Calendrie_Examen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RPT\Liste_groupe.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\liste_examens.resx">
       <DependentUpon>liste_examens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Liste_Salle.resx">
+      <DependentUpon>Liste_Salle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Passer.resx">
       <DependentUpon>Passer.cs</DependentUpon>
@@ -308,6 +323,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RPT\Calendrie_Examen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Calendrie_Examen.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RPT\Liste_groupe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Liste_groupe.cs</LastGenOutput>

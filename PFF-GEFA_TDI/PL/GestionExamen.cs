@@ -30,7 +30,7 @@ namespace PFF_GEFA_TDI.PL
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Voullez vous vraiment supprimer l'enseignent ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Voullez vous vraiment supprimer l'examen ?", "Question ???", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 ex.SupprimerExamen(int.Parse(this.dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                 MessageBox.Show("L'examen supprimer avec succèss", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,6 +49,14 @@ namespace PFF_GEFA_TDI.PL
             frm.lTitre.Text = "Modifier Examen";
             frm.btnAjouter.Text = "Modifier";
             frm.cas = "Modifier";
+            frm.ShowDialog();
+        }
+
+        private void btnImprimer_Click(object sender, EventArgs e)
+        {
+            RPT.Calendrie_Examen rpt = new RPT.Calendrie_Examen();
+            RPT.R_Form_RPT frm = new RPT.R_Form_RPT();
+            frm.crystalReportViewer1.ReportSource = rpt;
             frm.ShowDialog();
         }
     }
