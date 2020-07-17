@@ -149,9 +149,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 17);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Date examen :";
+            this.label3.Text = "Capacité :";
             // 
             // txtType
             // 
@@ -247,9 +247,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 17);
+            this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "ID Examen :";
+            this.label2.Text = "Nom Salle :";
             // 
             // groupBox1
             // 
@@ -266,7 +266,7 @@
             this.groupBox1.Size = new System.Drawing.Size(549, 201);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Examen :";
+            this.groupBox1.Text = "Salle :";
             // 
             // lTitre
             // 

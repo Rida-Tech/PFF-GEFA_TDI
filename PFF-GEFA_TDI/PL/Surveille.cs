@@ -46,7 +46,7 @@ namespace PFF_GEFA_TDI.PL
             PL.Form_List_Groupe grp = new Form_List_Groupe();
             grp.ShowDialog();
             txtIDgrp.Text= grp.dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txtgroupe.Text = grp.dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtgroupe.Text = grp.dataGridView1.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
